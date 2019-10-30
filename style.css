@@ -1,0 +1,57 @@
+hr {
+    height: 3px;
+    background: #5C5959;
+    margin-top: 30px; 
+}
+
+footer
+{
+    background-color: #F65454;
+}
+
+#low{
+  list-style:none;
+}
+
+li {
+  display: inline-block;
+  font-size: 22px;
+  margin-left: 120px;
+  padding: 12px;
+  text-align: center;
+}
+
+#navigat a
+{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+
+#contacts img {
+    height: 50px;
+    width: 50px;
+    margin-left: 7px;
+    margin-right: 7px;
+  margin-bottom: 10px;
+}
+#contacts a {
+    text-decoration: none;
+}
+#contacts img:hover {
+    opacity: 0.8;
+}
+#contacts {
+    text-align: center;
+}
+
+
+
+@media all and (max-width: 961px)  {
+  
+  li{   
+        text-align: center;
+        margin-left: 10px;
+    display: block;
+    }
+}
