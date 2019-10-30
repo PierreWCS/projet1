@@ -1,0 +1,18 @@
+.sectionBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.boxPro {
+    width: 40vh;
+    border: solid;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 8px 8px 12px #aaa;
+}
+.logoEntr {
+    width: 150px;
+	height: 150px;
+}
