@@ -1,2 +1,3 @@
 Rouge Wild: #F65454
 Blanc background: #FFFFFF
+couleur police "gris foncé": #394253

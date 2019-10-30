@@ -1,21 +1,44 @@
+.redButton {
+    background-color: #F65454;
+    padding: 2%;
+    border-radius: 17%;
+    text-underline-position: inherit;
+    text-decoration: none;
+}
+
+/* Section des entreprises */
+
+/* TODO: responsive de la section */
+
 .sectionBox {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
+    color: #394253;
 }
 .boxPro {
+    padding: 5px;
     width: 40vh;
     border: solid;
     display: flex;
-    justify-content: center;
     flex-direction: column;
     align-items: center;
     box-shadow: 8px 8px 12px #aaa;
+    text-align: center;
 }
 .logoEntr {
     width: 150px;
 	height: 150px;
 }
+.titreSec {
+    color: #394253;
+    justify-content: center;
+    display: flex;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+/* Footer */
 
 hr {
     height: 3px;
