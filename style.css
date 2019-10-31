@@ -5,10 +5,18 @@
     text-underline-position: inherit;
     text-decoration: none;
 }
+h1{
+  font-family: 'Heebo', sans-serif;
+    text-align: center;
+}
+.heebo{
+    font-family: 'Heebo', sans-serif;
+    text-align: center;
+}
+
 
 /* Section des entreprises */
 
-/* TODO: responsive de la section */
 
 .sectionBox {
     display: flex;
@@ -28,7 +36,7 @@
 }
 .logoEntr {
     width: 150px;
-	height: 150px;
+  height: 150px;
 }
 .titreSec {
     color: #394253;
@@ -86,11 +94,33 @@ li {
 #contacts {
     text-align: center;
 }
-
+hr{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
 @media all and (max-width: 961px)  {
     li{   
         text-align: center;
         margin-left: 10px;
         display: block;
     }
+
+    footer ul li{
+      text-align: center;
+      margin-left: -40px;
+    }
+   .carousel{
+      width: auto;
+    }
+
+  .description{
+    text-align: center;
+  }
+    .sectionBox{
+        display: inline-block;
+        margin-left: 70px;
+    }
+  .boxPro{
+    margin-bottom: 30px;
+  }
 }
