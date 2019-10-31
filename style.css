@@ -1,9 +1,13 @@
 .redButton {
     background-color: #F65454;
-    padding: 2%;
-    border-radius: 17%;
-    text-underline-position: inherit;
+    padding: 10px 30px;
+    border-radius: 40px;
     text-decoration: none;
+    color: white;
+    letter-spacing: 0.3px;
+}
+h3 {
+    color: #F65454;
 }
 
 /* Section des entreprises */
@@ -13,24 +17,31 @@
 .sectionBox {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     color: #394253;
 }
 .boxPro {
-    padding: 5px;
-    width: 40vh;
+    padding: 15px;
+    width: 45vh;
+    height: 60vh;
     border: solid;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     box-shadow: 8px 8px 12px #aaa;
     text-align: center;
+    border-radius: 60px;
+}
+.boxPro:hover{
+    box-shadow: 15px 15px 22px red;
 }
 .logoEntr {
     width: 150px;
 	height: 150px;
 }
 .titreSec {
+    background-color: #F65454;
     color: #394253;
     justify-content: center;
     display: flex;
@@ -92,5 +103,14 @@ li {
         text-align: center;
         margin-left: 10px;
         display: block;
+        border-radius: 10px;
+        padding-bottom: 15px;
+    }
+    .sectionBox {
+        flex-direction: column;
+        align-items: center;
+    }
+    h3 {
+        text-align: center;
     }
 }
