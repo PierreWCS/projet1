@@ -1,6 +1,10 @@
+body {
+    background-color:white;
+}
 .redButton {
     background-color: #F65454;
     padding: 10px 30px;
+    margin-bottom: 5px;
     border-radius: 40px;
     text-decoration: none;
     color: white;
@@ -8,6 +12,8 @@
 }
 h3 {
     color: #F65454;
+    font-size: 26pt;
+    text-decoration: underline;
 }
 
 /* Section des entreprises */
@@ -18,35 +24,58 @@ h3 {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    color: #394253;
 }
 .boxPro {
-    padding: 15px;
+    padding: 20px;
     width: 45vh;
-    height: 60vh;
+    height: 700px;
     border: solid;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     box-shadow: 8px 8px 12px #aaa;
     text-align: center;
     border-radius: 60px;
+    margin: 10px 0;
+    justify-content: space-between;
+    background-color: #dfe4ea;
+    transition: all 1s;
 }
 .boxPro:hover{
-    box-shadow: 15px 15px 22px red;
+    box-shadow: 15px 15px 22px #F65454;
+    transform: scale(1.05);
+}
+
+
+.sousTitre {
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Heebo', sans-serif;
 }
 .logoEntr {
     width: 150px;
-	height: 150px;
+    height: 150px;
+    border: solid black;
+    background-color: white;
+    box-shadow: 3px 3px 7px;
 }
 .titreSec {
     background-color: #F65454;
-    color: #394253;
+    color: white;
     justify-content: center;
     display: flex;
     padding-top: 2%;
     padding-bottom: 2%;
+    border: solid black;
+    border-radius: 20px;
+    box-shadow: 4px 4px 12px grey;
+}
+h4 {
+    padding : 0px;
+    margin-bottom: -10%;
+    font-size: 20px;
+    color: #F65454;
+    font-family: 'Heebo', sans-serif;
 }
 
 /* Footer */
@@ -97,7 +126,10 @@ li {
 #contacts {
     text-align: center;
 }
-
+hr{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
 @media all and (max-width: 961px)  {
     li{   
         text-align: center;
@@ -112,5 +144,34 @@ li {
     }
     h3 {
         text-align: center;
+    }
+    footer ul li{
+      text-align: center;
+      margin-left: -40px;
+    }
+   .carousel{
+      width: auto;
+    }
+  .description{
+    text-align: center;
+    }
+    .sectionBox{
+        display: inline-block;
+        margin-left: 70px;
+    }
+  .boxPro{
+    margin-bottom: 30px;
+    }
+    .sectionBox {
+        flex-direction: column;
+        align-items: center;
+    }
+    h3 {
+        text-align: center;
+    }
+
+    .boxPro:hover{
+        box-shadow: none;
+        transform: none;
     }
 }
