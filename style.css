@@ -202,7 +202,7 @@ footer p{
 @media all and (max-width: 961px)  {
    footer li{   
 
-        text-align: center;
+        
         margin-left: -15px;
         display: block;
   }
@@ -212,7 +212,7 @@ footer p{
 
 @media all and (max-width: 1405px)  {
    footer li{   
-        text-align: center;
+        
         margin-left: -50px;
         display: block;
   }
