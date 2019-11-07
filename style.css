@@ -142,7 +142,7 @@ font-family: 'Heebo', sans-serif;
 {
   
   transform: none;
-
+}
 /* Footer */
 
 hr {
@@ -201,6 +201,7 @@ footer p{
 
 @media all and (max-width: 961px)  {
    footer li{   
+
         text-align: center;
         margin-left: -15px;
         display: block;
@@ -215,5 +216,6 @@ footer p{
         margin-left: -50px;
         display: block;
   }
+
 
 }
