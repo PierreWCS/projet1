@@ -1,5 +1,179 @@
+
+/*========== General ==========*/
+  
+  header {
+    font-family: Arial, sans-serif;
+    background-color: #F76C6C;
+    display: flex;
+    width: 100%;
+    position: sticky;
+  }
+  
+  .headerTitle {
+    display: inline-block;
+    margin-left: 5%;
+    font-size: 1.9em;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .headerN {
+    margin-left: 55px;
+    margin-top: 15px;
+  }
+  
+  .section {
+    display: inline-block;
+    justify-content: space-between;
+  }
+  
+  .section a {
+    color: white;
+    padding: 0px 30px;
+  }
+  
+  .section a:hover {
+    background-color: #e0e0e0;
+  }
+  
+  h1 {
+    font-family: Arial, sans-serifArial, sans-serif;
+  }
+
+
+/*========== carousel ==========*/
+
+/*demarage du carousel*/
+  .carousel {
+      width: 100vw;
+      height: 50%;
+}
+
+/*glissement image pour chaque image*/
+ul.slides {
+    display: block;
+    position: relative;
+    height: 600px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    list-style: none;
+}
+
+/*container slide permet de rester en affichage block*/
+.slide-container { 
+    display: block; 
+}
+
+/*propriete dune image quand elle slide 
+(affichage, ça position, largeur en fonction du navigateur
+avec temps de transition de limage*/
+.slide-image {
+    display: block;
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    top: 0;
+    opacity: 0;
+    transition: all .9s ease-in-out;
+}   
+
+/*placement des images en fonction de la largeur de lecran*/
+.slide-image img {
+    width: auto;
+    min-width: 100vw;
+    height: 100%;
+}
+
+/*permet lapparition des labels*/
+.carousel-controls {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    font-size: 100px;
+    line-height: 600px;
+    color: #fff;
+}
+
+/*permet de placer les label (les fleches) en fonction du carousel container*/
+.carousel-controls label {
+    display: none;
+    position: absolute;
+    padding: 0 20px;
+    opacity: 0;
+    transition: opacity .2s;
+    cursor: pointer;
+}
+
+
+/*permet de controler lopacite des label pour quelles soit visible*/
+.carousel-controls label:hover {
+    opacity: 1;
+}
+
+/*gere les labels en fonction de leur fonction next previous*/
+.carousel-controls .prev-slide {
+    width: 49%;
+    text-align: left;
+    left: 0;
+}
+
+.carousel-controls .next-slide {
+    width: 49%;
+    text-align: right;
+    right: 0;
+}
+
+/*propriete appartenant au 3dot*/
+.carousel-dots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    z-index: 999;
+    text-align: center;
+}
+
+/*prend tous les dots en fonction dune dot
+(placement, couleur de fond...*/
+.carousel-dots .carousel-dot {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.5;
+    margin: 10px;
+}
+
+/*temps de transition des images*/
+input:checked + .slide-container .slide-image {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 2s ease-in-out;
+}
+
+/*fleches droite gauche permet de les inserer dans le container lors du slide*/
+input:checked + .slide-container .carousel-controls label {
+     display: block; 
+}
+
+/*permet de verifier de surligner les dot lorsquelle sont checked (verifié)*/
+input#img-1:checked ~ .carousel-dots label#img-dot-1,
+input#img-2:checked ~ .carousel-dots label#img-dot-2,
+input#img-3:checked ~ .carousel-dots label#img-dot-3,
+input#img-4:checked ~ .carousel-dots label#img-dot-4,
+input#img-5:checked ~ .carousel-dots label#img-dot-5,
+input#img-6:checked ~ .carousel-dots label#img-dot-6 {
+	opacity: 1;
+}
+
 body {
     background-color:white;
+    width: 100%;
+    margin: auto;
 }
 .redButton {
     background-color: #F65454;
@@ -336,3 +510,4 @@ hr{
       display: block;
   }
 }
+/*FIN*/

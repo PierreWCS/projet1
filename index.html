@@ -12,7 +12,17 @@
 
 </head>
 <body>   
-    <header>  
+    <header>
+        <h1 class="headerTitle">After Wild</h1>
+        <nav class="headerN">
+                <ul>
+                    <li class="section"><a href="#prez">présentation</a></li>
+                    <li class="section"><a href="#startup">Start-up</a></li>
+                    <li class="section"><a href="#ESN">ESN</a></li>
+                    <li class="section"><a href="#Autres">Autres</a></li>
+                </ul>
+        </nav>
+
         <nav>
             <h2>AfterWild</h2>
             <ul>
@@ -32,14 +42,73 @@
                 <span></span>
                 
                 <ul id="menu">
-                <a class="navLink" href="#"><li>Startups</li></a>
-                <a class="navLink" href="#"><li>ESN</li></a>
-                <a class="navLink" href="#"><li>Agences Web</li></a>
-                <a class="navLink" href="#"><li>A propos</li></a>
+                    <a class="navLink" href="#"><li>Startups</li></a>
+                    <a class="navLink" href="#"><li>ESN</li></a>
+                    <a class="navLink" href="#"><li>Agences Web</li></a>
+                    <a class="navLink" href="#"><li>A propos</li></a>
                 </ul>
             </div>
         </nav>
-    </header>
+   </header>
+   <section>
+
+        <div class="carousel">
+            <ul class="slides">
+                <input type="radio" name="radio-buttons" id="img-1" checked />
+                <li class="slide-container">
+                    <div class="slide-image">
+                        <img src="./Images/labo-orleans-nuit.jpg">
+                    </div>
+                    <div class="carousel-controls">
+                        <label for="img-3" class="prev-slide">
+                            <span>&lsaquo;</span>
+                        </label>
+
+                        <label for="img-2" class="next-slide">
+                            <span>&rsaquo;</sp@an>
+                        </label>
+                    </div>
+                </li>
+
+                <input type="radio" name="radio-buttons" id="img-2" />
+                <li class="slide-container">
+                    <div class="slide-image">
+                        <img src="./Images/code-coding-data-574071.jpg">
+                    </div>
+                    <div class="carousel-controls">
+                        <label for="img-1" class="prev-slide">
+                            <span>&lsaquo;</span>
+                        </label>
+                        <label for="img-3" class="next-slide">
+                            <span>&rsaquo;</span>
+                        </label>
+                    </div>
+                </li>
+
+                <input type="radio" name="radio-buttons" id="img-3" />
+                <li class="slide-container">
+                    <div class="slide-image">
+                        <img src="./Images/WildCodeSchool_logo_pink_background_400x220.png">
+                    </div>
+                    <div class="carousel-controls">
+                        <label for="img-2" class="prev-slide">
+                            <span>&lsaquo;</span>
+                        </label>
+                        <label for="img-1" class="next-slide">
+                            <span>&rsaquo;</span>
+                        </label>
+                    </div>
+                </li>
+
+                <div class="carousel-dots">
+                    <label for="img-1" class="carousel-dot" id="img-dot-1"></label>
+                    <label for="img-2" class="carousel-dot" id="img-dot-2"></label>
+                    <label for="img-3" class="carousel-dot" id="img-dot-3"></label>
+                </div>
+
+            </ul>
+        </div>
+    </section>
     
     <section class="description">
         <h1>Description</h1>
