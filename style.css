@@ -308,10 +308,10 @@ hr{
   .description{
     text-align: center;
     }
-    .sectionBox{
-        display: inline-block;
-        margin-left: 70px;
-    }
+  .sectionBox{
+      display: inline-block;
+      margin-left: 70px;
+  }
   .boxPro{
     margin-bottom: 30px;
     }
@@ -332,8 +332,7 @@ hr{
 
 @media all and (max-width: 1405px)  {
    footer li{   
-        
-        margin-left: -50px;
-        display: block;
+      margin-left: -50px;
+      display: block;
   }
 }
