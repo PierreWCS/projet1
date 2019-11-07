@@ -172,9 +172,14 @@ input#img-6:checked ~ .carousel-dots label#img-dot-6 {
 
 body {
     background-color:white;
+<<<<<<< HEAD
     width: 100%;
     margin: auto;
     overflow-x:hidden;
+=======
+    margin: 0;
+    overflow-x: hidden;
+>>>>>>> d72eb794c1920caf0be856f0d16e321d7478f41e
 }
 
 .redButton {
@@ -378,7 +383,7 @@ h4 {
   margin: -100px 0 0 0;
   padding: 50px;
   padding-top: 125px;
-  
+  opacity: 0;
   background: #ededed;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
@@ -387,7 +392,7 @@ h4 {
   transform-origin: 0% 0%;
   transform: translate(100%, 0);
   
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  transition: all 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
 #menu li
@@ -401,7 +406,7 @@ h4 {
  */
 #menuToggle input:checked ~ ul
 {
-  
+  opacity: 1;
   transform: none;
 }
 
@@ -425,12 +430,12 @@ footer
   margin-bottom: 50px;
 }
 
-footer li {
-  display: inline-block;
+footer ul {
+  display: flex;
   font-size: 22px;
-  margin-left: 145px;
-  padding: 12px;
-  text-align: center;  
+  justify-content: space-around;
+  margin: 0;
+  padding: 20px 0;
 }
 
 #navigat a
@@ -464,12 +469,14 @@ hr{
   margin-top: 50px;
   margin-bottom: 50px;
 }
-@media all and (max-width: 961px)  {
-   footer li{   
-        margin-left: -15px;
-        display: block;
-        border-radius: 10px;
-        padding-bottom: 15px;
+@media screen and (max-width: 961px)  {
+   footer ul{   
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    footer ul li {
+      margin: 10px 0;
     }
     .sectionBox {
         flex-direction: column;
@@ -477,10 +484,6 @@ hr{
     }
     h3 {
         text-align: center;
-    }
-    footer ul li{
-      text-align: center;
-      margin-left: -40px;
     }
    .carousel{
       width: auto;
@@ -508,13 +511,3 @@ hr{
         transform: none;
     }
 }
-
-
-@media all and (max-width: 1405px)  {
-   footer li{   
-      margin-left: -50px;
-      display: block;
-  }
-}
-
-/*FIN*/
