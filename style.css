@@ -172,14 +172,8 @@ input#img-6:checked ~ .carousel-dots label#img-dot-6 {
 
 body {
     background-color:white;
-<<<<<<< HEAD
-    width: 100%;
-    margin: auto;
-    overflow-x:hidden;
-=======
     margin: 0;
     overflow-x: hidden;
->>>>>>> d72eb794c1920caf0be856f0d16e321d7478f41e
 }
 
 .redButton {
@@ -436,17 +430,25 @@ footer ul {
   justify-content: space-around;
   margin: 0;
   padding: 20px 0;
+  color: white;
 }
 
-#navigat a
-{
+a{
+  color: white;
   text-decoration: none;
-  color: #FFFFFF;
 }
+footer nav ul a:hover{
+  color: #476995;
+
+}
+
+
 footer p{
   text-align: center;
   color: #FFFFFF;
   font-size: 14px;
+  margin: 0;
+  padding: 15px;
 }
 
 #contacts img {
