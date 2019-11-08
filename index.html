@@ -9,10 +9,12 @@
     <link href="https://fonts.googleapis.com/css?family=Heebo&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/path/to/csslider.css">
     <title>AfterWild</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 
 </head>
-<body>   
-    <header>
+<body>
+        
+    <header><div id="menuprincipal">
         <h1 class="headerTitle">After Wild</h1>
         <nav class="headerN">
                 <ul>
@@ -23,8 +25,9 @@
                     <li class="section"><a href="#contact">Nous contacter</a></li>
                 </ul>
         </nav>
+    </header></div>
     
-      
+      <div id="header1">
         <nav role="navigation">
             <div id="menuToggle">
                 <input class="hamburger" type="checkbox" />
@@ -34,16 +37,16 @@
                 <span></span>
                 
                 <ul id="menu">
-                    <a class="navLink" href="#"><li>Startups</li></a>
-                    <a class="navLink" href="#"><li>ESN</li></a>
-                    <a class="navLink" href="#"><li>Agences Web</li></a>
-                    <a class="navLink" href="#"><li>A propos</li></a>
+                    <a class="navLink" href="#prez"><li>Présentation</li></a>
+                    <a class="navLink" href="#startup"><li>Startups</li></a>
+                    <a class="navLink" href="#ESN"><li>ESN</li></a>
+                    <a class="navLink" href="#agenceweb"><li>Agences Web</li></a>
+                    <a class="navLink" href="#contact"><li>Nous contacter</li></a>
                 </ul>
             </div>
         </nav>
-   </header>
+    </div>
    <section>
-
         <div class="carousel">
             <ul class="slides">
                 <input type="radio" name="radio-buttons" id="img-1" checked />
@@ -231,7 +234,7 @@
     
     <hr/> 
 
-    <a id="contact"><footer></a>            
+    <footer><a id="contact"></a>            
         <nav id="navigat">
             <ul id= "low">
                 <li><a href="#">A propos</a></li>
@@ -262,6 +265,59 @@
             </div>
         </div>
         <p>- - Copyright ® Officiel  _  Octobre 2019 - -</p>
-    </footer>
+   </footer>
+
+
+   <div><a id="theRetour" class="isInvisible" href="#haut"></a></div>
+
+        <script>
+            /*. On ajouter un « addEventListener » qui s'assure que la page soit chargée :
+            document.addEventListener('DOMContentLoaded', function() {... };});*/
+        document.addEventListener('DOMContentLoaded', function() {
+            /*Execute le js quand l'element est en train de scrolled: window(fenêtre) onscroll et ev 
+            recuperer levenement onscroll*/
+            /*Une fois la page chargé il detect le défilement */
+        window.onscroll = function(ev) {
+            /*recuperation de l'id theRetour qui est mon bouton et leur class*/
+            /*si c'est le cas on cible la la cass de lelement retour: "theRetour"
+            Et on interchange la classe selon la position dans la page, visible dès qu'elle est à plus de 100px du haut. */
+            /*en brf il gere l'aaparition du bouton*/
+            document.getElementById("theRetour").className = (window.pageYOffset > 100) ? "isVisible" : "isInvisible";
+        };
+        });
+</script>
+<script>            
+    jQuery(document).ready(function() {
+        /*duree du scroll retour*/
+      var duration = 500;
+      jQuery(window).scroll(function() {
+        if (jQuery(this).scrollTop() > 100) {
+          // Si il y a un défillement de 100 px ou plus.
+          //alors
+          // Ajoute le bouton "theRetour"
+          jQuery('.theRetour').fadeIn(duration);
+          //sinon
+        } else {
+          //enlève le bouton "theRtour"
+          jQuery('.theRetour').fadeOut(duration);
+        }
+      });
+      //onclick il y a retour en haut animé
+      jQuery('.theRetour').click(function(event) {
+          /*Si l'événement n'est pas traité explicitement,
+          son action par défaut ne doit pas être prise en compte*/
+        event.preventDefault();
+        jQuery('html, body').animate({scrollTop: 0}, duration);
+        return false;
+      })
+    });
+    </script>
+    
+    <div class="theRetour"></div>
+
+
+
+
+
 </body>
 </html>
