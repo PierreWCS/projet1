@@ -22,10 +22,13 @@ h3 {
 
 .sectionBox {
     display: flex;
+    width: 100%;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    margin-bottom: 5%;
 }
 .boxPro {
+    font-family: 'Noto Sans', sans-serif;
     padding: 20px;
     width: 45vh;
     height: 700px;
@@ -44,12 +47,13 @@ h3 {
 .boxPro:hover{
     box-shadow: 15px 15px 22px #F65454;
     transform: scale(1.05);
+    background-color: white;
 }
 
 
 .sousTitre {
     text-align: center;
-    font-size: 16px;
+    font-size: 24px;
     font-family: 'Heebo', sans-serif;
     margin: 30px;
 }
@@ -70,6 +74,7 @@ h3 {
     border: solid black;
     border-radius: 20px;
     box-shadow: 4px 4px 12px grey;
+    font-family: 'Rubik', sans-serif;
 }
 h4 {
     padding : 0px;
@@ -78,6 +83,13 @@ h4 {
     color: #F65454;
     font-family: 'Heebo', sans-serif;
 }
+
+
+
+
+/*           MENU HAMBURGER             */
+
+
 
 .heebo{
   font-family: 'Heebo', sans-serif;
@@ -123,9 +135,7 @@ h4 {
   -webkit-touch-callout: none;
 }
 
-/*
- * Just a quick hamburger
- */
+
 #menuToggle span
 {
   display: block;
@@ -157,10 +167,6 @@ h4 {
   transform-origin: 0% 100%;
 }
 
-/* 
- * Transform all the slices of hamburger
- * into a crossmark.
- */
 #menuToggle input:checked ~ span
 {
   opacity: 1;
@@ -168,28 +174,17 @@ h4 {
   background: #232323;
 }
 
-/*
- * But let's hide the middle one.
- */
 #menuToggle input:checked ~ span:nth-last-child(3)
 {
   opacity: 0;
   overflow:hiden;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
-
-/*
- * Ohyeah and the last one should go the other direction
- */
 #menuToggle input:checked ~ span:nth-last-child(2)
 {
   transform: rotate(-45deg) translate(0, -1px);
 }
 
-/*
- * Make this absolute positioned
- * at the top left of the screen
- */
 #menu
 {
   position: absolute;
@@ -202,8 +197,6 @@ h4 {
   background: #ededed;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
-  /* to stop flickering of text in safari */
-  
   transform-origin: 0% 0%;
   transform: translate(100%, 0);
   
@@ -215,17 +208,17 @@ h4 {
   padding: 10px 0;
   font-size: 22px;
 }
-
-/*
- * And let's slide it in from the left
- */
 #menuToggle input:checked ~ ul
 {
   
   transform: none;
 }
 
-/* Footer */
+
+
+/*           Footer       */
+
+
 
 hr {
   border: 1.5px black solid;
@@ -284,6 +277,18 @@ hr{
   margin-top: 50px;
   margin-bottom: 50px;
 }
+
+
+
+/*         MEDIA QUERY         */ 
+
+
+
+
+/*          TELEPHONE      */
+
+
+
 @media all and (max-width: 961px)  {
    footer li{   
         margin-left: -15px;
@@ -293,7 +298,7 @@ hr{
     }
     .sectionBox {
         flex-direction: column;
-        align-items: center;
+        justify-content: center;
     }
     h3 {
         text-align: center;
@@ -305,22 +310,12 @@ hr{
    .carousel{
       width: auto;
     }
-  .description{
-    text-align: center;
+    .description{
+      text-align: center;
     }
-    .sectionBox{
-        display: inline-block;
-        margin-left: 70px;
-    }
-  .boxPro{
-    margin-bottom: 30px;
-    }
-    .sectionBox {
-        flex-direction: column;
-        align-items: center;
-    }
-    h3 {
-        text-align: center;
+    .boxPro{
+       margin-bottom: 30px;
+       justify-items: center;
     }
 
     .boxPro:hover{
@@ -330,10 +325,47 @@ hr{
 }
 
 
+
+/*            TABLETTE         */
+
+
+
 @media all and (max-width: 1405px)  {
-   footer li{   
-        
-        margin-left: -50px;
-        display: block;
+  footer li{       
+    margin-left: -50px;
+    display: block;
   }
+  .sectionBox {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+    flex-direction: column;
+  }
+
+h3 {
+    text-align: center;
+}
+footer ul li{
+  text-align: center;
+  margin-left: -40px;
+}
+.carousel{
+  width: auto;
+}
+.description{
+text-align: center;
+}
+.boxPro{
+   margin-bottom: 30px;
+   justify-items: center;
+}
+h3 {
+    text-align: center;
+}
+
+.boxPro:hover{
+    box-shadow: none;
+    transform: none;
+}
 }
