@@ -1,6 +1,181 @@
+
+/*========== General ==========*/
+  
+  header {
+    font-family: Arial, sans-serif;
+    background-color: #F65454;
+    display: flex;
+    width: 100%;
+    position: sticky;
+  }
+  
+  .headerTitle {
+    display: inline-block;
+    margin-left: 5%;
+    font-size: 1.9em;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .headerN {
+    margin-left: 55px;
+    margin-top: 15px;
+  }
+  
+  .section {
+    display: inline-block;
+    justify-content: space-between;
+  }
+  
+  .section a {
+    color: white;
+    padding: 0px 30px;
+  }
+  
+  .section a:hover {
+    background-color: #e0e0e0;
+  }
+  
+  h1 {
+    font-family: Arial, sans-serifArial, sans-serif;
+  }
+
+
+/*========== carousel ==========*/
+
+/*demarage du carousel*/
+  .carousel {
+      width: 100vw;
+      height: 50%;
+}
+
+/*glissement image pour chaque image*/
+ul.slides {
+    display: block;
+    position: relative;
+    height: 600px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    list-style: none;
+}
+
+/*container slide permet de rester en affichage block*/
+.slide-container { 
+    display: block; 
+}
+
+/*propriete dune image quand elle slide 
+(affichage, ça position, largeur en fonction du navigateur
+avec temps de transition de limage*/
+.slide-image {
+    display: block;
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    top: 0;
+    opacity: 0;
+    transition: all .9s ease-in-out;
+}   
+
+/*placement des images en fonction de la largeur de lecran*/
+.slide-image img {
+    width: auto;
+    min-width: 100vw;
+    height: 100%;
+}
+
+/*permet lapparition des labels*/
+.carousel-controls {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    font-size: 100px;
+    line-height: 600px;
+    color: #fff;
+}
+
+/*permet de placer les label (les fleches) en fonction du carousel container*/
+.carousel-controls label {
+    display: none;
+    position: absolute;
+    padding: 0 20px;
+    opacity: 0;
+    transition: opacity .2s;
+    cursor: pointer;
+}
+
+
+/*permet de controler lopacite des label pour quelles soit visible*/
+.carousel-controls label:hover {
+    opacity: 1;
+}
+
+/*gere les labels en fonction de leur fonction next previous*/
+.carousel-controls .prev-slide {
+    width: 49%;
+    text-align: left;
+    left: 0;
+}
+
+.carousel-controls .next-slide {
+    width: 49%;
+    text-align: right;
+    right: 0;
+}
+
+/*propriete appartenant au 3dot*/
+.carousel-dots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    z-index: 999;
+    text-align: center;
+}
+
+/*prend tous les dots en fonction dune dot
+(placement, couleur de fond...*/
+.carousel-dots .carousel-dot {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.5;
+    margin: 10px;
+}
+
+/*temps de transition des images*/
+input:checked + .slide-container .slide-image {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 2s ease-in-out;
+}
+
+/*fleches droite gauche permet de les inserer dans le container lors du slide*/
+input:checked + .slide-container .carousel-controls label {
+     display: block; 
+}
+
+/*permet de verifier de surligner les dot lorsquelle sont checked (verifié)*/
+input#img-1:checked ~ .carousel-dots label#img-dot-1,
+input#img-2:checked ~ .carousel-dots label#img-dot-2,
+input#img-3:checked ~ .carousel-dots label#img-dot-3,
+input#img-4:checked ~ .carousel-dots label#img-dot-4,
+input#img-5:checked ~ .carousel-dots label#img-dot-5,
+input#img-6:checked ~ .carousel-dots label#img-dot-6 {
+	opacity: 1;
+}
+
 body {
     background-color:white;
+    margin: 0;
+    overflow-x: hidden;
 }
+
 .redButton {
     background-color: #F65454;
     padding: 10px 30px;
@@ -93,6 +268,10 @@ h4 {
 
 .heebo{
   font-family: 'Heebo', sans-serif;
+  text-align: center;
+  font-weight: bold;
+  margin-top:2%;
+  margin-bottom:2%;
 }
 
 .navlink
@@ -193,14 +372,14 @@ h4 {
   margin: -100px 0 0 0;
   padding: 50px;
   padding-top: 125px;
-  
+  opacity: 0;
   background: #ededed;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   transform-origin: 0% 0%;
   transform: translate(100%, 0);
   
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  transition: all 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
 #menu li
@@ -210,7 +389,7 @@ h4 {
 }
 #menuToggle input:checked ~ ul
 {
-  
+  opacity: 1;
   transform: none;
 }
 
@@ -238,23 +417,31 @@ footer
   margin-bottom: 50px;
 }
 
-footer li {
-  display: inline-block;
+footer ul {
+  display: flex;
   font-size: 22px;
-  margin-left: 145px;
-  padding: 12px;
-  text-align: center;  
+  justify-content: space-around;
+  margin: 0;
+  padding: 20px 0;
+  color: white;
 }
 
-#navigat a
-{
+a{
+  color: white;
   text-decoration: none;
-  color: #FFFFFF;
 }
+footer nav ul a:hover{
+  color: #476995;
+
+}
+
+
 footer p{
   text-align: center;
   color: #FFFFFF;
   font-size: 14px;
+  margin: 0;
+  padding: 15px;
 }
 
 #contacts img {
@@ -289,12 +476,14 @@ hr{
 
 
 
-@media all and (max-width: 961px)  {
-   footer li{   
-        margin-left: -15px;
-        display: block;
-        border-radius: 10px;
-        padding-bottom: 15px;
+@media screen and (max-width: 961px)  {
+   footer ul{   
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    footer ul li {
+      margin: 10px 0;
     }
     .sectionBox {
         flex-direction: column;
@@ -303,15 +492,19 @@ hr{
     h3 {
         text-align: center;
     }
-    footer ul li{
-      text-align: center;
-      margin-left: -40px;
-    }
    .carousel{
       width: auto;
     }
+<<<<<<< HEAD
     .description{
       text-align: center;
+    }
+  .boxPro{
+    margin-bottom: 30px;
+    }
+    .sectionBox {
+        flex-direction: column;
+        align-items: center;
     }
     .boxPro{
        margin-bottom: 30px;
@@ -323,6 +516,7 @@ hr{
         transform: none;
     }
 }
+<<<<<<< HEAD
 
 
 

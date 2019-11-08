@@ -14,54 +14,110 @@
 </head>
 <body>   
     <header>
-            
-        <nav>
-            <h2>AfterWild</h2>
-            <ul>
-                <li>Présentation</li>
-                <li>Startups</li>
-                <li>ESN</li>
-                <li>Agence Web</li>
-            </ul>
+        <h1 class="headerTitle">After Wild</h1>
+        <nav class="headerN">
+                <ul>
+                    <li class="section"><a href="#prez">Présentation</a></li>
+                    <li class="section"><a href="#startup">Start-up</a></li>
+                    <li class="section"><a href="#ESN">ESN</a></li>
+                    <li class="section"><a href="#agenceweb">Agences Web</a></li>
+                    <li class="section"><a href="#contact">Nous contacter</a></li>
+                </ul>
         </nav>
-    </header>
-
-
-        
+    
+      
         <nav role="navigation">
-                <div id="menuToggle">
-              
-                  <input class="hamburger" type="checkbox" />
-                  
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  
-                  <ul id="menu">
+            <div id="menuToggle">
+                <input class="hamburger" type="checkbox" />
+                
+                <span></span>
+                <span></span>
+                <span></span>
+                
+                <ul id="menu">
                     <a class="navLink" href="#"><li>Startups</li></a>
                     <a class="navLink" href="#"><li>ESN</li></a>
                     <a class="navLink" href="#"><li>Agences Web</li></a>
                     <a class="navLink" href="#"><li>A propos</li></a>
-                  </ul>
+                </ul>
+            </div>
+        </nav>
+   </header>
+   <section>
+
+        <div class="carousel">
+            <ul class="slides">
+                <input type="radio" name="radio-buttons" id="img-1" checked />
+                <li class="slide-container">
+                    <div class="slide-image">
+                        <img src="./Images/labo-orleans-nuit.jpg">
+                    </div>
+                    <div class="carousel-controls">
+                        <label for="img-3" class="prev-slide">
+                            <span>&lsaquo;</span>
+                        </label>
+
+                        <label for="img-2" class="next-slide">
+                            <span>&rsaquo;</sp@an>
+                        </label>
+                    </div>
+                </li>
+
+                <input type="radio" name="radio-buttons" id="img-2" />
+                <li class="slide-container">
+                    <div class="slide-image">
+                        <img src="./Images/code-coding-data-574071.jpg">
+                    </div>
+                    <div class="carousel-controls">
+                        <label for="img-1" class="prev-slide">
+                            <span>&lsaquo;</span>
+                        </label>
+                        <label for="img-3" class="next-slide">
+                            <span>&rsaquo;</span>
+                        </label>
+                    </div>
+                </li>
+
+                <input type="radio" name="radio-buttons" id="img-3" />
+                <li class="slide-container">
+                    <div class="slide-image">
+                        <img src="./Images/WildCodeSchool_logo_pink_background_400x220.png">
+                    </div>
+                    <div class="carousel-controls">
+                        <label for="img-2" class="prev-slide">
+                            <span>&lsaquo;</span>
+                        </label>
+                        <label for="img-1" class="next-slide">
+                            <span>&rsaquo;</span>
+                        </label>
+                    </div>
+                </li>
+
+                <div class="carousel-dots">
+                    <label for="img-1" class="carousel-dot" id="img-dot-1"></label>
+                    <label for="img-2" class="carousel-dot" id="img-dot-2"></label>
+                    <label for="img-3" class="carousel-dot" id="img-dot-3"></label>
                 </div>
-              </nav>
+
+            </ul>
+        </div>
+    </section>
     
-    </header>
-    <section class="description">
-        <h1>Description</h1>
+    <a id="prez"><section class="description"></a>
         <p class="heebo">Wilder! vous avez survécu à la Wild codes school.
            <br>Il est maintenant temps pour vous de concrétiser vos projets et d'acquerir de l'experience en vous lançant dans le monde de l'entreprise.</br>
            Ce site est un guide pour vous accompagner lors de cet étapes.
         </p>
     </section>
     <h1 class="titreSec">Les startups</h1>
+
     <div class="sousTitre">
         <p>Pourquoi s'y diriger?</p>
         <p>Les startups conviendraient plutôt aux developpeurs avec un profil curieux, polyvalent,</p>
         <p>passionné et avec une réelle volonté de monter en compétences</p>
     </div>
+
     <section class="sectionBox">
-        
         <div class="boxPro">
             <h3 class="titreEntr">Alter Ego digital</h3>
             <img class="logoEntr" src="./Images/alterEgoLogo.png">
@@ -95,10 +151,12 @@
         </div>
     </section>
     <h1 class="titreSec">Les ESN</h1>
+
     <div class="sousTitre">
         <p>Pourquoi s'y diriger?</p>
         <p>Les ESN conviendraient à un développeur qui apprécie de trvailler en équipe et de travailler sur de multiples projets</p>
     </div>
+
     <section class="sectionBox">
         <div class="boxPro">
             <h3>Sopra steria</h3>
@@ -132,10 +190,12 @@
         </div>
     </section>
     <h1 class="titreSec">Les agences web</h1>
+
     <div class="sousTitre">
         <p>Pourquoi s'y diriger?</p>
         <p>Les startups conviendraient plutôt aux developpeurs avec profil</p>
     </div>
+
     <section class="sectionBox">
         <div class="boxPro">
             <h3>MIKII • Agence web</h3>
@@ -169,37 +229,40 @@
         </div>
     </section>
     
-
     <hr/> 
 
-<footer>            
+<footer>          
       <nav id="navigat">
              <ul id= "low">
              <li><a href="#">A propos</a></li>
-             <li><a href="#">Liens</a></li>
-               <li><a href="https://www.wildcodeschool.com/fr-FR">Wild Code School</a></li>
-               <li><a href="#">Recherche</a></li>
+             <li><a href="https://lespepitestech.com/french-tech-hub/orleans"target="_blank">Liens</a></li>
+               <li><a href="https://www.wildcodeschool.com/fr-FR" target="_blank">Wild Code School</a></li>
+               <li><a href="https://www.google.fr/" target="_blank">Recherche</a></li>
              <li><a href="#">Plan de site</a></li>			
           </ul>
+
         </nav>
 
         <div id="contacts">
- 				
             <div>
+                <a href="https://twitter.com/?lang=fr"target="_blank">
+                    <img alt="twitter" src="https://www.sololearn.com/Uploads/icons/twitter.png" />
+                </a>
+                <a href="https://fr-fr.facebook.com/"target="_blank">
+                    <img alt="Facebook" src="https://www.sololearn.com/Uploads/icons/facebook.png"/>
+                </a>
+                <a href="https://www.instagram.com/"target="_blank">
+                    <img alt="instagram" src="http://laccroparc.com/wp-content/uploads/2018/09/instagram-colourful-icon.png" />
+                </a>
+                <a href="https://www.flickr.com/"target="_blank">
+                    <img alt="Flickr" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Flickr.svg/256px-Flickr.svg.png" />
+                </a>
                 <a href="#">
-                    <img alt="twitter" src="https://www.sololearn.com/Uploads/icons/twitter.png" /></a>
-                <a href="#">
-                    <img alt="Facebook" src="https://www.sololearn.com/Uploads/icons/facebook.png"/></a>
-                <a href="#">
-                    <img alt="instagram" src="http://laccroparc.com/wp-content/uploads/2018/09/instagram-colourful-icon.png" /></a>
-                <a href="#">
-                    <img alt="Flickr" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Flickr.svg/256px-Flickr.svg.png" /></a>
-                <a href="#">
-                    <img alt="RSS" src="https://wpformation.com/wp-content/uploads/2014/12/Les-flux-RSS-generes-par-WordPress.png" /></a>
-                   
+                    <img alt="RSS" src="https://wpformation.com/wp-content/uploads/2014/12/Les-flux-RSS-generes-par-WordPress.png" />
+                </a>
             </div>
         </div>
-                  <p>- - Copyright ® Officiel  _  Octobre 2019 - -</p>
-</footer>
+        <p>- - Copyright ® Officiel  _  Octobre 2019 - -</p>
+    </footer>
 </body>
 </html>
