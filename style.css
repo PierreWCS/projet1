@@ -403,7 +403,7 @@ hr {
   border: 1.5px black solid;
   margin-top: 50px;
   margin-bottom: 30px;
-  box-shadow: 4px 4px 6px red; 
+  box-shadow: 1px 1px 1px rgb(235, 135, 135); 
 }
 
 footer
@@ -460,10 +460,7 @@ footer p{
 #contacts {
   text-align: center;
 }
-hr{
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
+
 
 
 
