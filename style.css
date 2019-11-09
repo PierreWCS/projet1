@@ -339,6 +339,9 @@ h3 {
   margin-left: auto;
   margin-right: auto;
 }
+.seeMore:hover {
+  background-color: #e55039;
+}
 /*           MENU HAMBURGER             */
 
 
