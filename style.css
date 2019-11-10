@@ -188,56 +188,68 @@ body {
 h3 {
     color: #F65454;
     font-size: 26pt;
-    text-decoration: underline;
 }
 
-/* Section des entreprises */
+/*      Section des entreprises       */
 
-/* TODO: responsive de la section */
 
+.sectionPro {
+  display: flex;
+  flex-direction: column;
+  background-image: url("Images/logoWild.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-attachment: fixed;
+  background-size: 20%;
+}
 .sectionBox {
     display: flex;
-    width: 100%;
     flex-direction: row;
-    justify-content: space-around;
-    margin-bottom: 5%;
+    justify-content: center;
 }
 .boxPro {
     font-family: 'Noto Sans', sans-serif;
     padding: 20px;
-    width: 45vh;
-    height: 700px;
+    width: 35vh;
+    height: 550px;
     border: solid;
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 8px 8px 12px #aaa;
     text-align: center;
-    border-radius: 60px;
+    border-radius: 2%;
     margin: 10px 0;
-    justify-content: space-between;
-    background-color: #dfe4ea;
+    margin: 20px;
+    background-color: #ea8685;
+    color: white;
     transition: all 1s;
 }
-.boxPro:hover{
-    box-shadow: 15px 15px 22px #F65454;
-    transform: scale(1.05);
-    background-color: white;
+.boxPro p {
+  color: #596275;
+  padding: 15px;
+  margin-bottom: 5px;
 }
-
-
+.boxPro h3 {
+  margin: 15px;
+  color: white;
+}
+.boxPro:hover{
+  color: white;
+  opacity: 80%;
+  box-shadow: 8px 8px 12px #aaa;
+  transform: scale(1.05);
+  background-color: #ea8685;
+}
 .sousTitre {
     text-align: center;
-    font-size: 24px;
+    font-size: 20px;
     font-family: 'Heebo', sans-serif;
-    margin: 30px;
 }
 .logoEntr {
     width: 150px;
     height: 150px;
-    border: solid black;
     background-color: white;
-    box-shadow: 3px 3px 7px;
+    border-radius: 10%;
 }
 .titreSec {
     background-color: #F65454;
@@ -246,22 +258,85 @@ h3 {
     display: flex;
     padding-top: 2%;
     padding-bottom: 2%;
-    border: solid black;
-    border-radius: 20px;
-    box-shadow: 4px 4px 12px grey;
     font-family: 'Rubik', sans-serif;
 }
-h4 {
+.boxPro h4 {
     padding : 0px;
+    margin-top: 0px;
     margin-bottom: -10%;
     font-size: 20px;
-    color: #F65454;
+    color: white;
     font-family: 'Heebo', sans-serif;
 }
 
+/*             ACCORDION                 */
 
+.accordion {
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  font-family: 'Rubik', sans-serif;
+  font-size: 36px;
+  text-align: center;
+  padding: 50px;
+  text-decoration: none;
+  
+}
 
+.active, .accordion:hover {
+  opacity: 80%;
+}
 
+.accordion:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.acc1 {
+  background-color: #e66767;
+}
+.acc2 {
+  background-color: #ea8685;
+}
+.acc3 {
+  background-color: #f3a683;
+}
+.cartePro {
+  color: grey;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.seeMore {
+  cursor: pointer;
+  background-color: #e66767;
+  padding: 10px 30px;
+  margin-bottom: 5px;
+  border-radius: 40px;
+  text-decoration: none;
+  color: white;
+  letter-spacing: 0.3px;
+}
 /*           MENU HAMBURGER             */
 
 
@@ -430,6 +505,8 @@ footer a{
   color: white;
   text-decoration: none;
 }
+
+
 footer nav ul a:hover{
   color: #CFC0BD;
 
@@ -474,45 +551,38 @@ footer p{
 
 
 @media screen and (max-width: 961px)  {
-   footer ul{   
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-    footer ul li {
-      margin: 10px 0;
-    }
-    .sectionBox {
-        flex-direction: column;
-        justify-content: center;
-    }
-    h3 {
-        text-align: center;
-    }
-   .carousel{
-      width: auto;
-    }
-
-    .description{
-      text-align: center;
-    }
+  footer ul{   
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  footer ul li {
+    margin: 10px 0;
+  }
+  .sectionBox {
+    flex-direction: column;
+    justify-content: center;
+  }
+  h3 {
+    text-align: center;
+  }
+  .carousel{
+    width: auto;
+  }
+  .description{
+    text-align: center;
+  }
   .boxPro{
     margin-bottom: 30px;
-    }
-    .sectionBox {
-        flex-direction: column;
-        align-items: center;
-    }
-    .boxPro{
-       margin-bottom: 30px;
-       justify-items: center;
-    }
-
-    .boxPro:hover{
-        box-shadow: none;
-        transform: none;
-    }
+    margin-bottom: 30px;
+    justify-items: center;
+  }
+  .boxPro:hover{
+    box-shadow: none;
+    transform: none;
+  }
 }
+
 
 /*            TABLETTE         */
 
