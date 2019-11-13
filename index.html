@@ -9,13 +9,15 @@
     <link href="https://fonts.googleapis.com/css?family=Heebo&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/path/to/csslider.css">
     <title>AfterWild</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 
 </head>
-<body>   
-    <header>
-        <h1 class="headerTitle">After Wild</h1>
+<body>
+        
+    <header><div id="menuprincipal">
         <nav class="headerN">
                 <ul>
+                    <li class="section"><div class="logo1"><img src="./Images/logowild.png"></div></img></li>
                     <li class="section"><a href="#prez">Présentation</a></li>
                     <li class="section"><a href="#startup">Start-up</a></li>
                     <li class="section"><a href="#ESN">ESN</a></li>
@@ -23,27 +25,30 @@
                     <li class="section"><a href="#contact">Nous contacter</a></li>
                 </ul>
         </nav>
-    
-      
-        <nav role="navigation">
-            <div id="menuToggle">
-                <input class="hamburger" type="checkbox" />
-                
-                <span></span>
-                <span></span>
-                <span></span>
-                
-                <ul id="menu">
-                    <a class="navLink" href="#"><li>Startups</li></a>
-                    <a class="navLink" href="#"><li>ESN</li></a>
-                    <a class="navLink" href="#"><li>Agences Web</li></a>
-                    <a class="navLink" href="#"><li>A propos</li></a>
-                </ul>
-            </div>
-        </nav>
-   </header>
-   <section>
+    </header></div>
 
+    <div id="header1">
+            <nav role="navigation">
+                <div id="menuToggle">
+                    <input class="hamburger" type="checkbox" />
+                    
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    
+                    <ul id="menu">
+                        <a class="navLink" href="#prez"><li>Présentation</li></a>
+                        <a class="navLink" href="#startup"><li>Startups</li></a>
+                        <a class="navLink" href="#ESN"><li>ESN</li></a>
+                        <a class="navLink" href="#agenceweb"><li>Agences Web</li></a>
+                        <a class="navLink" href="#contact"><li>Nous contacter</li></a>
+                    </ul>
+                </div>
+            </nav>
+    </div>
+
+    
+   <section>
         <div class="carousel">
             <ul class="slides">
                 <input type="radio" name="radio-buttons" id="img-1" checked />
@@ -80,7 +85,7 @@
                 <input type="radio" name="radio-buttons" id="img-3" />
                 <li class="slide-container">
                     <div class="slide-image">
-                        <img src="./Images/WildCodeSchool_logo_pink_background_400x220.png">
+                        <img src="./Images/lastjob.png">
                     </div>
                     <div class="carousel-controls">
                         <label for="img-2" class="prev-slide">
@@ -108,6 +113,7 @@
            Ce site est un guide pour vous accompagner lors de cet étapes.
         </p>
     </section>
+    <a id="startup"></a><h1 class="titreSec">Les startups</h1>
 
 <!--                Corps du site                -->
 
@@ -159,6 +165,7 @@
         </div>
         <button class="seeMore" href="https://www.google.com/search?client=ubuntu&channel=fs&q=startup+orleans&ie=utf-8&oe=utf-8">Voir plus</button>
     </section>
+    <a id="ESN"></a><h1 class="titreSec">Les ESN</h1>
 
 <!--                       ESN                      -->
 
@@ -205,6 +212,12 @@
         </div>
         <button class="seeMore" href="https://www.google.com/search?client=ubuntu&channel=fs&q=startup+orleans&ie=utf-8&oe=utf-8">Voir plus</button>
     </section>
+    <a id="agenceweb"><h1 class="titreSec">Les agences web</h1></a>
+
+    <div class="sousTitre">
+        <p>Pourquoi s'y diriger?</p>
+        <p>Les agences web conviendraient plutôt aux developpeurs avec un profil curieux d'apprendre de nouvelles connaissances</p>
+    </div>
 
 <!--                     AGENCES WEB              -->
 
@@ -276,6 +289,7 @@
 <!--                  Fin de corps             -->
 <hr>
 
+
 <footer>          
       <nav id="navigat">
              <ul id= "low">
@@ -288,7 +302,7 @@
 
         </nav>
 
-        <div id="contacts">
+        <a id="contact"></a><div id="contacts">
             <div>
                 <a href="https://twitter.com/?lang=fr"target="_blank">
                     <img alt="twitter" src="https://sac.edu/StudentServices/VSSS/PublishingImages/Pages/default/Twitter-logo-300x300.png" />
@@ -307,10 +321,61 @@
                 </a>
             </div>
         </div>
+        <a href="https://codepen.io/Ryad-75/full/jOOKWqJ"><p>- - Copyright ® Officiel  _  Octobre 2019 - -</p></a>
 
 
 
 
     </footer>
+
+
+   <div><a id="theRetour" class="isInvisible" href="#haut"></a></div>
+
+        <script>
+            /*. On ajouter un « addEventListener » qui s'assure que la page soit chargée :
+            document.addEventListener('DOMContentLoaded', function() {... };});*/
+        document.addEventListener('DOMContentLoaded', function() {
+            /*Execute le js quand l'element est en train de scrolled: window(fenêtre) onscroll et ev 
+            recuperer levenement onscroll*/
+            /*Une fois la page chargé il detect le défilement */
+        window.onscroll = function(ev) {
+            /*recuperation de l'id theRetour qui est mon bouton et leur class*/
+            /*si c'est le cas on cible la la cass de lelement retour: "theRetour"
+            Et on interchange la classe selon la position dans la page, visible dès qu'elle est à plus de 100px du haut. */
+            /*en brf il gere l'aaparition du bouton*/
+            document.getElementById("theRetour").className = (window.pageYOffset > 100) ? "isVisible" : "isInvisible";
+        };
+        });
+</script>
+<script>            
+    jQuery(document).ready(function() {
+        /*duree du scroll retour*/
+      var duration = 500;
+      jQuery(window).scroll(function() {
+        if (jQuery(this).scrollTop() > 100) {
+          // Si il y a un défillement de 100 px ou plus.
+          //alors
+          // Ajoute le bouton "theRetour"
+          jQuery('.theRetour').fadeIn(duration);
+          //sinon
+        } else {
+          //enlève le bouton "theRtour"
+          jQuery('.theRetour').fadeOut(duration);
+        }
+      });
+      //onclick il y a retour en haut animé
+      jQuery('.theRetour').click(function(event) {
+          /*Si l'événement n'est pas traité explicitement,
+          son action par défaut ne doit pas être prise en compte*/
+        event.preventDefault();
+        jQuery('html, body').animate({scrollTop: 0}, duration);
+        return false;
+      })
+    });
+    </script>
+    
+    <div class="theRetour"></div>
+
+        
 </body>
 </html>
