@@ -524,6 +524,11 @@ footer ul {
   color: white;
 }
 
+footer a{
+  color: white;
+  text-decoration: none;
+}
+
 
 footer nav ul a:hover{
   color: #CFC0BD;
