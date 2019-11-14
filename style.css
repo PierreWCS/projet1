@@ -492,7 +492,6 @@ h3 {
 
 /*           Footer       */
 
->>>>>>> a4a432a8c0f59029f8b7699c5ea1414a173ffafd
 
 
 hr {
@@ -548,6 +547,7 @@ footer p{
   margin-left: 7px;
   margin-right: 7px;
   margin-bottom: 15px;
+  border-radius: 30px;
 }
 #contacts a {
   text-decoration: none;
@@ -581,9 +581,7 @@ hr{
   right: 20px;
   display: none;
   }
-=======
 
->>>>>>> a4a432a8c0f59029f8b7699c5ea1414a173ffafd
 
   /*le retour avant scoll*/
 
@@ -596,6 +594,7 @@ un background saffiche*/
   background:rgba(0, 0, 0, 1);
   transition:all ease-in 0.2s;
   }
+}
 
 /*******FIN du bouton (Sibel)**********/
 
@@ -788,17 +787,20 @@ un background saffiche*/
     
 }
 
-=======
-}
-
-
-/*            TABLETTE         */
->>>>>>> a4a432a8c0f59029f8b7699c5ea1414a173ffafd
 
 /*            TABLETTE         */
 
 
 @media all and (max-width: 1405px)  {
+  footer ul{   
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  footer ul li {
+    margin: 10px 0;
+  }
+  
   #menuprincipal{
     display:none;
   }
@@ -806,14 +808,7 @@ un background saffiche*/
     display:none;
   }
   
-   footer li{   
-      margin-left: -50px;
-      display: block;
-   }
-  footer li{       
-    margin-left: -50px;
-    display: block;
-  }
+  
   .sectionBox {
     display: flex;
     flex-direction: column;
@@ -825,10 +820,7 @@ un background saffiche*/
   h3 {
       text-align: center;
   }
-  footer ul li{
-    text-align: center;
-    margin-left: -40px;
-  }
+ 
   .carousel{
     width: auto;
   }
