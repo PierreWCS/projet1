@@ -285,7 +285,6 @@ h3 {
 }
 
 /****FIN du corps du site (Pierre)***********/
-=======
 /*             ACCORDION                 */
 
 .accordion {
@@ -494,7 +493,6 @@ h3 {
 
 /*           Footer       */
 
->>>>>>> a4a432a8c0f59029f8b7699c5ea1414a173ffafd
 
 
 hr {
@@ -583,9 +581,7 @@ hr{
   right: 20px;
   display: none;
   }
-=======
 
->>>>>>> a4a432a8c0f59029f8b7699c5ea1414a173ffafd
 
   /*le retour avant scoll*/
 
@@ -598,6 +594,7 @@ un background saffiche*/
   background:rgba(0, 0, 0, 1);
   transition:all ease-in 0.2s;
   }
+}
 
 /*******FIN du bouton (Sibel)**********/
 
@@ -790,12 +787,6 @@ un background saffiche*/
     
 }
 
-=======
-}
-
-
-/*            TABLETTE         */
->>>>>>> a4a432a8c0f59029f8b7699c5ea1414a173ffafd
 
 /*            TABLETTE         */
 
