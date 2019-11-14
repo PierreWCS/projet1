@@ -28,6 +28,7 @@ header {
 .section {
   display: inline-block;
   justify-content: space-between;
+    text-underline-style: none;
 }
 
 .section a {
@@ -36,8 +37,8 @@ header {
 }
 
 .section a:hover {
-  background-color: gray;
-  border-radius:5px;
+    background-color: #e77f67;
+    border-radius:5px;
 }
 
 h1 {
