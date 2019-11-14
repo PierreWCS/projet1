@@ -26,9 +26,9 @@ header {
 
 }
 .section {
-  display: inline-block;
-  justify-content: space-between;
-    text-underline-style: none;
+    display: inline-block;
+    justify-content: space-between;
+    text-decoration: none;
 }
 
 .section a {
