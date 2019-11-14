@@ -1,52 +1,61 @@
+/*========== General header (Sibel) ==========*/
+body {
+    background-color: white;
+    width: 100%;
+    margin: auto;
+    overflow-x: hidden;
+}
 
-/*========== General ==========*/
-  
-  header {
-    font-family: Arial, sans-serif;
+header {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15pt;
     background-color: #F65454;
     display: flex;
     width: 100%;
     position: sticky;
-  }
-  
-  .headerTitle {
-    display: inline-block;
-    margin-left: 5%;
-    font-size: 1.9em;
-    font-weight: bold;
-    color: white;
-  }
-  
-  .headerN {
-    margin-left: 55px;
-    margin-top: 15px;
-  }
-  
-  .section {
+}
+
+#header1 {
+    display: none;
+}
+
+.redNav {
+    display: flex;
+    align-items: center;
+}
+
+.logo1 {
+    margin-right: 10%;
+    display: flex;
+
+}
+
+.section {
     display: inline-block;
     justify-content: space-between;
-  }
-  
-  .section a {
+    text-decoration: none;
+}
+
+.section a {
     color: white;
     padding: 0px 30px;
-  }
-  
-  .section a:hover {
-    background-color: #e0e0e0;
-  }
-  
-  h1 {
+}
+
+.section a:hover {
+    background-color: #e77f67;
+    border-radius: 5px;
+}
+
+h1 {
     font-family: Arial, sans-serifArial, sans-serif;
-  }
+}
 
-
-/*========== carousel ==========*/
+/*========== carousel (Sibel) ==========*/
 
 /*demarage du carousel*/
-  .carousel {
-      width: 100vw;
-      height: 50%;
+.carousel {
+    width: 100vw;
+    height: 50%;
 }
 
 /*glissement image pour chaque image*/
@@ -61,8 +70,8 @@ ul.slides {
 }
 
 /*container slide permet de rester en affichage block*/
-.slide-container { 
-    display: block; 
+.slide-container {
+    display: block;
 }
 
 /*propriete dune image quand elle slide 
@@ -76,7 +85,7 @@ avec temps de transition de limage*/
     top: 0;
     opacity: 0;
     transition: all .9s ease-in-out;
-}   
+}
 
 /*placement des images en fonction de la largeur de lecran*/
 .slide-image img {
@@ -157,24 +166,35 @@ input:checked + .slide-container .slide-image {
 
 /*fleches droite gauche permet de les inserer dans le container lors du slide*/
 input:checked + .slide-container .carousel-controls label {
-     display: block; 
+    display: block;
 }
 
-/*permet de verifier de surligner les dot lorsquelle sont checked (verifié)*/
+/*permet de verifier de surligner les dot lorsquelle
+sont checked (verifié)*/
 input#img-1:checked ~ .carousel-dots label#img-dot-1,
 input#img-2:checked ~ .carousel-dots label#img-dot-2,
 input#img-3:checked ~ .carousel-dots label#img-dot-3,
 input#img-4:checked ~ .carousel-dots label#img-dot-4,
 input#img-5:checked ~ .carousel-dots label#img-dot-5,
 input#img-6:checked ~ .carousel-dots label#img-dot-6 {
-	opacity: 1;
+    opacity: 1;
 }
 
-body {
-    background-color:white;
-    margin: 0;
-    overflow-x: hidden;
+/****FIN du carouselle (Sibel)***********/
+
+/*========== description site (Zak) ==========*/
+.heebo {
+    font-family: 'Heebo', sans-serif;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
+
+
+/****FIN description (Zak)***********/
+
+/*========== Corps site (Pierre) ==========*/
 
 .redButton {
     background-color: #F65454;
@@ -185,6 +205,7 @@ body {
     color: white;
     letter-spacing: 0.3px;
 }
+
 h3 {
     color: #F65454;
     font-size: 26pt;
@@ -194,20 +215,22 @@ h3 {
 
 
 .sectionPro {
-  display: flex;
-  flex-direction: column;
-  background-image: url("Images/logoWild.png");
-  background-repeat: no-repeat;
-  background-position: left center;
-  background-attachment: fixed;
-  background-size: 20%;
-  margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    background-image: url("Images/logoWild.png");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-attachment: fixed;
+    background-size: 20%;
+    margin-bottom: 25px;
 }
+
 .sectionBox {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
+
 .boxPro {
     font-family: 'Noto Sans', sans-serif;
     padding: 20px;
@@ -221,31 +244,36 @@ h3 {
     border-radius: 2%;
     margin: 10px 0;
     margin: 20px;
-    background-color: #ea8685;
+    background-color: #e66767;
     color: white;
     transition: all 1s;
 }
+
 .boxPro p {
-  color: #596275;
-  padding: 15px;
-  margin-bottom: 5px;
+    color: lightgray;
+    padding: 15px;
+    margin-bottom: 5px;
 }
+
 .boxPro h3 {
-  margin: 15px;
-  color: white;
+    margin: 15px;
+    color: white;
 }
-.boxPro:hover{
-  color: white;
-  opacity: 80%;
-  box-shadow: 8px 8px 12px #aaa;
-  transform: scale(1.05);
-  background-color: #ea8685;
+
+.boxPro:hover {
+    color: white;
+    opacity: 80%;
+    box-shadow: 8px 8px 12px #aaa;
+    transform: scale(1.05);
+    background-color: #ea8685;
 }
+
 .sousTitre {
     text-align: center;
     font-size: 20px;
     font-family: 'Heebo', sans-serif;
 }
+
 .logoEntr {
     padding: 20px;
     width: 150px;
@@ -253,6 +281,7 @@ h3 {
     background-color: white;
     border-radius: 10%;
 }
+
 .titreSec {
     background-color: #F65454;
     color: white;
@@ -262,8 +291,9 @@ h3 {
     padding-bottom: 2%;
     font-family: 'Rubik', sans-serif;
 }
+
 .boxPro h4 {
-    padding : 0px;
+    padding: 0px;
     margin-top: 0px;
     margin-bottom: -10%;
     font-size: 20px;
@@ -271,287 +301,212 @@ h3 {
     font-family: 'Heebo', sans-serif;
 }
 
+
 /*             ACCORDION                 */
 
 .accordion {
-  color: white;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-  transition: 0.4s;
-  font-family: 'Rubik', sans-serif;
-  font-size: 36px;
-  text-align: center;
-  padding: 50px;
-  text-decoration: none;
-  
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    font-family: 'Rubik', sans-serif;
+    font-size: 36px;
+    text-align: center;
+    padding: 50px;
+    text-decoration: none;
+
 }
 
 .active, .accordion:hover {
-  opacity: 80%;
+    opacity: 80%;
 }
 
 .accordion:after {
-  content: '\002B';
-  color: white;
-  font-weight: bold;
-  float: right;
-  margin-left: 5px;
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
 }
 
 .active:after {
-  content: "\2212";
+    content: "\2212";
 }
 
 .panel {
-  padding: 0 18px;
-  background-color: white;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
 }
+
 .acc1 {
-  background-color: #e66767;
+    background-color: #e66767;
 }
+
 .acc2 {
-  background-color: #ea8685;
+    background-color: #ea8685;
 }
+
 .acc3 {
-  background-color: #f3a683;
+    background-color: #f3a683;
 }
+
 .cartePro {
-  color: grey;
-  cursor: pointer;
-  text-decoration: none;
+    color: grey;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 .seeMore {
-  cursor: pointer;
-  background-color: #e66767;
-  padding: 10px 50px;
-  border-radius: 40px;
-  text-decoration: none;
-  color: white;
-  letter-spacing: 0.3px;
-  margin-left: auto;
-  margin-right: auto;
+    cursor: pointer;
+    background-color: #e66767;
+    padding: 10px 50px;
+    border-radius: 40px;
+    text-decoration: none;
+    color: white;
+    letter-spacing: 0.3px;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 .seeMore:hover {
-  background-color: #e55039;
-}
-/*           MENU HAMBURGER             */
-
-
-
-.heebo{
-  font-family: 'Heebo', sans-serif;
-  text-align: center;
-  font-weight: bold;
-  margin-top:2%;
-  margin-bottom:2%;
+    background-color: #e55039;
 }
 
-.navlink
-{
-  text-decoration: none;
-  color: #232323;
-  transition: color 0.3s ease;
-}
-
-.navLink:hover
-{
-	text-decoration:underline;
-}
-
-#menuToggle
-{
-  display: block;
-  position: absolute;
-  top: 50px;
-  right: 50px;
-  
-  z-index: 1;
-  -webkit-user-select: none;
-  user-select: none;
-}
-
-#menuToggle input
-{
-  display: block;
-  position:absolute;
-  width: 50px;
-  height: 33px;
-  top: -7px;
-  right:-10px;
-  cursor: pointer;
-
-  opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
-  
-  -webkit-touch-callout: none;
-}
-
-
-#menuToggle span
-{
-  display: block;
-  position: absolute;
-  right:10%;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
-  position: relative;
-  background: #cdcdcd;
-  border-radius: 0;
-  
-  z-index: 1;
-  
-  transform-origin: 4px 0px;
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
-}
-
-#menuToggle span:first-child
-{
-  transform-origin: 0% 0%;
-}
-
-#menuToggle span:nth-last-child(2)
-{
-  transform-origin: 0% 100%;
-}
-
-#menuToggle input:checked ~ span
-{
-  opacity: 1;
-  transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
-}
-
-#menuToggle input:checked ~ span:nth-last-child(3)
-{
-  opacity: 0;
-  overflow:hiden;
-  transform: rotate(0deg) scale(0.2, 0.2);
-}
-#menuToggle input:checked ~ span:nth-last-child(2)
-{
-  transform: rotate(-45deg) translate(0, -1px);
-}
-
-#menu
-{
-  position: absolute;
-  width: 300px;
-  right:-150px;
-  margin: -100px 0 0 0;
-  padding: 50px;
-  padding-top: 125px;
-  opacity: 0;
-  background: #ededed;
-  list-style-type: none;
-  -webkit-font-smoothing: antialiased;
-  transform-origin: 0% 0%;
-  transform: translate(100%, 0);
-  
-  transition: all 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-}
-
-#menu li
-{
-  padding: 10px 0;
-  font-size: 22px;
-}
-#menuToggle input:checked ~ ul
-{
-  opacity: 1;
-  transform: none;
-}
-
-
-
+/****FIN du corps du site (Pierre)***********/
 /*           Footer       */
 
 
-
 hr {
-  border: 1.5px black solid;
-  margin-top: 50px;
-  margin-bottom: 30px;
-  box-shadow: 1px 1px 1px rgb(235, 135, 135); 
+    border: 1.5px black solid;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    box-shadow: 1px 1px 1px rgb(235, 135, 135);
 }
 
-footer
-{
-  background-color: #F65454;
-  box-shadow: 2px 2px 2px black; 
+footer {
+    background-color: #F65454;
+    box-shadow: 2px 2px 2px black;
 }
 
-#low{
-  list-style:none;
-  margin-bottom: 50px;
+#low {
+    list-style: none;
+    margin-bottom: 50px;
 }
 
 footer ul {
-  display: flex;
-  font-size: 22px;
-  justify-content: space-around;
-  margin: 0;
-  padding: 20px 0;
-  color: white;
+    display: flex;
+    font-size: 22px;
+    justify-content: space-around;
+    margin: 0;
+    padding: 20px 0;
+    color: white;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
 }
 
 
-footer nav ul a:hover{
-  color: #CFC0BD;
+footer nav ul a:hover {
+    color: #CFC0BD;
 
 }
 
 
-footer p{
-  text-align: center;
-  color: #FFFFFF;
-  font-size: 14px;
-  margin: 0;
-  padding: 15px;
+footer p {
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 14px;
+    margin: 0;
+    padding: 15px;
 }
 
 #contacts img {
-  height: 50px;
-  width: 50px;
-  margin-left: 7px;
-  margin-right: 7px;
-  margin-bottom: 15px;
+    height: 50px;
+    width: 50px;
+    margin-left: 7px;
+    margin-right: 7px;
+    margin-bottom: 15px;
+    border-radius: 30px;
 }
+
 #contacts a {
-  text-decoration: none;
+    text-decoration: none;
 }
+
 #contacts img:hover {
-  opacity: 0.8;
+    opacity: 0.8;
 }
+
 #contacts {
-  text-align: center;
+    text-align: center;
+}
+
+hr {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/****FIN Footer (Riad)***********/
+
+/*========== Bouton return (Sibel) ==========*/
+/*creation du bouton retour*/
+.theRetour {
+    border-radius: 3px;
+    padding: 10px;
+    font-size: 15px;
+    text-align: center;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.25);
+    z-index: 99999;
+    transition: all ease-in 0.2s;
+    position: fixed;
+    cursor: pointer;
+    bottom: 1em;
+    right: 20px;
+    display: none;
 }
 
 
+/*le retour avant scoll*/
+
+.theRetour:before {
+    content: "\25b2 Retour en haut";
+}
+
+/*losrque le curseur de la souris se pose dessus
+un background saffiche*/
+
+.theRetour:hover {
+    background: rgba(0, 0, 0, 1);
+    transition: all ease-in 0.2s;
+}
+
+}
+
+/*******FIN du bouton (Sibel)**********/
 
 
-/*         MEDIA QUERY         */ 
+/************RESPONSIVE SITE**************/
+/*==========responsive menu toggle (Zak) ==========*/
 
-
-
-
-/*          TELEPHONE      */
-
-
+#header1 {
+    display: flex;
+}
 
 @media screen and (max-width: 961px)  {
+  footer{
+    padding-bottom: 50px;
+  }
   footer ul{   
     flex-direction: column;
     align-items: center;
@@ -570,6 +525,22 @@ footer p{
   .carousel{
     width: auto;
   }
+
+  .description{
+    text-align: center;
+  }
+  .boxPro{
+    margin-bottom: 30px;
+  }
+  .sectionBox {
+    flex-direction: column;
+    align-items: center;
+  }
+  .boxPro{
+    margin-bottom: 30px;
+    justify-items: center;
+  }
+
   .description{
     text-align: center;
   }
@@ -582,49 +553,499 @@ footer p{
     box-shadow: none;
     transform: none;
   }
+  /*========== responsive (Zak) ==========*/
+  /*==========responsive description (Zak) ==========*/
+  .heebo{
+    font-family: 'Heebo', sans-serif;
+    text-align: center;
+    font-weight: bold;
+    margin-top:2%;
+    margin-bottom:2%;
+  }
+
+  /*******FIN description (Zak)**********/
+  
+  /*==========responsive menu toggle (Zak) ==========*/
+
+  #header1{
+    display: flex;
+  }
+  .navLink{
+    text-decoration: none;
+    color: #232323;
+    transition: color 0.3s ease;
 }
 
+.navLink:hover {
+    text-decoration: underline;
+}
+
+#menuToggle {
+    display: block;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    z-index: 7777;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#menuToggle input {
+    display: block;
+    position: absolute;
+    width: 50px;
+    height: 33px;
+    top: -7px;
+    right: -10px;
+    cursor: pointer;
+
+    opacity: 0; /* hide this */
+    z-index: 2; /* and place it over the hamburger */
+
+    -webkit-touch-callout: none;
+}
+
+/*Just a quick hamburger*/
+#menuToggle span {
+    display: block;
+    position: absolute;
+    right: 10%;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #F65454;
+    border-radius: 0;
+
+    z-index: 1;
+
+    transform-origin: 4px 0px;
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+    opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+    transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+}
+
+/* Transform all the slices of hamburger into a crossmark.*/
+#menuToggle input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #232323;
+}
+
+/*But let's hide the middle one.*/
+#menuToggle input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    overflow: hiden;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*Ohyeah and the last one should go the other direction*/
+#menuToggle input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*Make this absolute positioned at the top left of the screen*/
+#menu {
+    position: absolute;
+    width: 300px;
+    right: -150px;
+    margin: -100px 0 0 0;
+    padding: 50px;
+    padding-top: 125px;
+
+    background: #ededed;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+
+    transform-origin: 0% 0%;
+    transform: translate(100%, 0);
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+#menu li {
+    padding: 10px 0;
+    font-size: 22px;
+}
+
+/*And let's slide it in from the left*/
+#menuToggle input:checked ~ ul {
+    transform: none;
+}
+
+/****FIN du menu responsive (Zak)***********/
+
+@media screen and (max-width: 961px) {
+
+    footer ul {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    footer ul li {
+        margin: 10px 0;
+    }
+
+    .sectionBox {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    h3 {
+        text-align: center;
+    }
+
+    .carousel {
+        width: auto;
+    }
+
+    .description {
+        text-align: center;
+    }
+
+    .boxPro {
+        margin-bottom: 30px;
+    }
+
+    .sectionBox {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .boxPro {
+        margin-bottom: 30px;
+        justify-items: center;
+    }
+
+    .description {
+        text-align: center;
+    }
+
+    .boxPro {
+        margin-bottom: 30px;
+        margin-bottom: 30px;
+        justify-items: center;
+    }
+
+    .boxPro:hover {
+        box-shadow: none;
+        transform: none;
+    }
+
+    /*========== responsive (Zak) ==========*/
+    /*==========responsive description (Zak) ==========*/
+    .heebo {
+        font-family: 'Heebo', sans-serif;
+        text-align: center;
+        font-weight: bold;
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+
+    /*******FIN description (Zak)**********/
+    /*==========responsive menu toggle (Zak) ==========*/
+    #header1 {
+        display: flex;
+    }
+
+    .navLink {
+        text-decoration: none;
+        color: #232323;
+        transition: color 0.3s ease;
+    }
+
+    .navLink:hover {
+        text-decoration: underline;
+    }
+
+    #menuToggle {
+        display: block;
+        position: absolute;
+        top: 50px;
+        right: 50px;
+        z-index: 7777;
+        -webkit-user-select: none;
+        user-select: none;
+    }
+
+    #menuToggle input {
+        display: block;
+        position: absolute;
+        width: 50px;
+        height: 33px;
+        top: -7px;
+        right: -10px;
+        cursor: pointer;
+
+        opacity: 0; /* hide this */
+        z-index: 2; /* and place it over the hamburger */
+
+        -webkit-touch-callout: none;
+    }
+
+    /*Just a quick hamburger*/
+    #menuToggle span {
+        display: block;
+        position: absolute;
+        right: 10%;
+        width: 33px;
+        height: 4px;
+        margin-bottom: 5px;
+        position: relative;
+        background: #F65454;
+        border-radius: 0;
+
+        z-index: 1;
+
+        transform-origin: 4px 0px;
+
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        opacity 0.55s ease;
+    }
+
+    #menuToggle span:first-child {
+        transform-origin: 0% 0%;
+    }
+
+    #menuToggle span:nth-last-child(2) {
+        transform-origin: 0% 100%;
+    }
+
+    /* Transform all the slices of hamburger into a crossmark.*/
+    #menuToggle input:checked ~ span {
+        opacity: 1;
+        transform: rotate(45deg) translate(-2px, -1px);
+        background: #232323;
+    }
+
+    /*But let's hide the middle one.*/
+    #menuToggle input:checked ~ span:nth-last-child(3) {
+        opacity: 0;
+        overflow: hiden;
+        transform: rotate(0deg) scale(0.2, 0.2);
+    }
+
+    /*Ohyeah and the last one should go the other direction*/
+    #menuToggle input:checked ~ span:nth-last-child(2) {
+        transform: rotate(-45deg) translate(0, -1px);
+    }
+
+    /*Make this absolute positioned at the top left of the screen*/
+    #menu {
+        position: absolute;
+        width: 300px;
+        right: -150px;
+        margin: -100px 0 0 0;
+        padding: 50px;
+        padding-top: 125px;
+
+        background: #ededed;
+        list-style-type: none;
+        -webkit-font-smoothing: antialiased;
+        /* to stop flickering of text in safari */
+
+        transform-origin: 0% 0%;
+        transform: translate(100%, 0);
+
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    }
+
+    #menu li {
+        padding: 10px 0;
+        font-size: 22px;
+    }
+
+    /*And let's slide it in from the left*/
+    #menuToggle input:checked ~ ul {
+        transform: none;
+    }
+
+    /****FIN du menu responsive (Zak)***********/
+    /*FIN DU SITE*/
+    .boxPro:hover {
+        box-shadow: none;
+        transform: none;
+    }
+
+}
 
 /*            TABLETTE         */
 
 
+@media all and (max-width: 1405px) {
+    /*==========responsive menu toggle (Zak) ==========*/
+    #header1 {
+        display: flex;
+    }
 
-@media all and (max-width: 1405px)  {
-  footer li{       
-    margin-left: -50px;
-    display: block;
-  }
-  .sectionBox {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    align-items: center;
-    flex-direction: column;
-  }
+    .navLink {
+        text-decoration: none;
+        color: #232323;
+        transition: color 0.3s ease;
+    }
 
-h3 {
-    text-align: center;
-}
-footer ul li{
-  text-align: center;
-  margin-left: -40px;
-}
-.carousel{
-  width: auto;
-}
-.description{
-text-align: center;
-}
-.boxPro{
-   margin-bottom: 30px;
-   justify-items: center;
-}
-h3 {
-    text-align: center;
-}
+    .navLink:hover {
+        text-decoration: underline;
+    }
 
-.boxPro:hover{
-    box-shadow: none;
-    transform: none;
-}
+    #menuToggle {
+        display: block;
+        position: absolute;
+        top: 50px;
+        right: 50px;
+        z-index: 7777;
+        -webkit-user-select: none;
+        user-select: none;
+    }
+
+    #menuToggle input {
+        display: block;
+        position: absolute;
+        width: 50px;
+        height: 33px;
+        top: -7px;
+        right: -10px;
+        cursor: pointer;
+
+        opacity: 0; /* hide this */
+        z-index: 2; /* and place it over the hamburger */
+
+        -webkit-touch-callout: none;
+    }
+
+    /*Just a quick hamburger*/
+    #menuToggle span {
+        display: block;
+        position: absolute;
+        right: 10%;
+        width: 33px;
+        height: 4px;
+        margin-bottom: 5px;
+        position: relative;
+        background: #F65454;
+        border-radius: 0;
+
+        z-index: 1;
+
+        transform-origin: 4px 0px;
+
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        opacity 0.55s ease;
+    }
+
+    #menuToggle span:first-child {
+        transform-origin: 0% 0%;
+    }
+
+    #menuToggle span:nth-last-child(2) {
+        transform-origin: 0% 100%;
+    }
+
+    /* Transform all the slices of hamburger into a crossmark.*/
+    #menuToggle input:checked ~ span {
+        opacity: 1;
+        transform: rotate(45deg) translate(-2px, -1px);
+        background: #232323;
+    }
+
+    /*But let's hide the middle one.*/
+    #menuToggle input:checked ~ span:nth-last-child(3) {
+        opacity: 0;
+        overflow: hiden;
+        transform: rotate(0deg) scale(0.2, 0.2);
+    }
+
+    /*Ohyeah and the last one should go the other direction*/
+    #menuToggle input:checked ~ span:nth-last-child(2) {
+        transform: rotate(-45deg) translate(0, -1px);
+    }
+
+    /*Make this absolute positioned at the top left of the screen*/
+    #menu {
+        position: absolute;
+        width: 300px;
+        right: -150px;
+        margin: -100px 0 0 0;
+        padding: 50px;
+        padding-top: 125px;
+
+        background: #ededed;
+        list-style-type: none;
+        -webkit-font-smoothing: antialiased;
+        /* to stop flickering of text in safari */
+
+        transform-origin: 0% 0%;
+        transform: translate(100%, 0);
+
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    }
+
+    #menu li {
+        padding: 10px 0;
+        font-size: 22px;
+    }
+
+    /*And let's slide it in from the left*/
+    #menuToggle input:checked ~ ul {
+        transform: none;
+    }
+
+    /****FIN du menu responsive (Zak)***********/
+    footer ul {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    footer ul li {
+        margin: 10px 0;
+    }
+
+    #menuprincipal {
+        display: none;
+    }
+
+    .headerN {
+        display: none;
+    }
+
+
+    .sectionBox {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    h3 {
+        text-align: center;
+    }
+
+    .carousel {
+        width: auto;
+    }
+
+    .description {
+        text-align: center;
+    }
+
+    .boxPro {
+        margin-bottom: 30px;
+        justify-items: center;
+    }
+
 }
