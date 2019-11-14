@@ -591,7 +591,9 @@ un background saffiche*/
 /****FIN du menu responsive (Zak)***********/
 
 @media screen and (max-width: 961px)  {
-  
+  footer{
+    padding-bottom: 50px;
+  }
   footer ul{   
     flex-direction: column;
     align-items: center;
