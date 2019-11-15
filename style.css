@@ -19,20 +19,33 @@ header {
     display: none;
 }
 
+.headerN {
+    display: flex;
+    width: 100%;
+}
 .redNav {
     display: flex;
+    width: 100%;
     align-items: center;
 }
 
 .logo1 {
-    margin-right: 10%;
     display: flex;
-
 }
 
 .section {
-    display: inline-block;
-    justify-content: space-between;
+    display: flex;
+    width: 100%;
+}
+
+.sectionN {
+    display: flex;
+    width: 100%;
+}
+
+.section {
+    width: 100%;
+    display: flex;
     text-decoration: none;
 }
 
