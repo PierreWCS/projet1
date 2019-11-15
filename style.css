@@ -39,6 +39,7 @@ header {
 .section a {
     color: white;
     padding: 0px 30px;
+    text-decoration:none;
 }
 
 .section a:hover {
