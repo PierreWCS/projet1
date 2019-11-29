@@ -511,7 +511,6 @@ un background saffiche*/
     transition: all ease-in 0.2s;
 }
 
-}
 
 /*******FIN du bouton (Sibel)**********/
 
@@ -664,7 +663,7 @@ un background saffiche*/
 /*But let's hide the middle one.*/
 #menuToggle input:checked ~ span:nth-last-child(3) {
     opacity: 0;
-    overflow: hiden;
+    overflow: hidden;
     transform: rotate(0deg) scale(0.2, 0.2);
 }
 
@@ -753,7 +752,6 @@ un background saffiche*/
     }
 
     .boxPro {
-        margin-bottom: 30px;
         margin-bottom: 30px;
         justify-items: center;
     }
@@ -853,7 +851,7 @@ un background saffiche*/
     /*But let's hide the middle one.*/
     #menuToggle input:checked ~ span:nth-last-child(3) {
         opacity: 0;
-        overflow: hiden;
+        overflow: hidden;
         transform: rotate(0deg) scale(0.2, 0.2);
     }
 
@@ -948,7 +946,6 @@ un background saffiche*/
     /*Just a quick hamburger*/
     #menuToggle span {
         display: block;
-        position: absolute;
         right: 10%;
         width: 33px;
         height: 4px;
@@ -984,7 +981,7 @@ un background saffiche*/
     /*But let's hide the middle one.*/
     #menuToggle input:checked ~ span:nth-last-child(3) {
         opacity: 0;
-        overflow: hiden;
+        overflow: hidden;
         transform: rotate(0deg) scale(0.2, 0.2);
     }
 
@@ -1048,7 +1045,6 @@ un background saffiche*/
         flex-direction: column;
         margin: 0 auto;
         align-items: center;
-        flex-direction: column;
     }
 
     h3 {
@@ -1068,4 +1064,4 @@ un background saffiche*/
         justify-items: center;
     }
 
-}
+}}
